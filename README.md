@@ -1,5 +1,4 @@
 # OIKOS: A FAMILY WEB ORGANIZER
-#### Video Demo:  https://youtu.be/S-64B_fvhOU
 
 #### Description:
 This web app allows to visualize and keep track of the user agenda and also of the events in the agenda of the other family members in the user's family. It allows to add, remove and edit events and to associate them to one or more family members. This way, a general overview of the events planned for all the members of the family can be achieved.
