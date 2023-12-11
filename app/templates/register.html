@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Family Organizer</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='custom_login.css') }}">
+
+    <!-- Add jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        
+    <!-- Add GoogleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
+
+    <style>
+        .flash-message {
+            margin-bottom: 1em;
+            color: red;
+        }
+    </style>
+
+
+</head>
+
+
+
+<body>
+    <div class="violet-container-whole">
+
+        <div class="wrap">
+
+            <div class="title">
+                
+                <p class="second">Register</p>
+            </div>
+
+
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="flash-message">
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <div class="white-container">
+
+                <form class="register" action="" method="post">
+                    {{ form.csrf_token }}
+
+                    <div class="mb-3">
+                        <label class = "register-label" for="username">Username:</label>
+                        <br>
+                        {{ form.username(id="username") }}
+                    </div>
+                    <div class="mb-3">
+                        <label class = "register-label" for="email">Email:</label>
+                        <br>
+                        {{ form.email(id="email") }}
+                    </div>
+                    <div class="mb-3">
+                        <label class = "register-label" for="alias">Alias:</label>
+                        <br>{{ form.alias(id="alias") }}
+                    </div>
+                    <div class="mb-3" id="family-cont">
+                        <label class = "register-label" for="family_name">Family:</label>
+                        <br>{{ form.family_name(id="family_name") }}
+                    
+                        <p> Or </p>
+                    
+                        <label class = "register-label" for="new_family_name">New Family:</label>
+                        <br>{{ form.new_family_name(id="new_family_name") }}
+                    </div>
+                    <div class="mb-3">
+                        <label class = "register-label" for="password">Password:</label>
+                        <br>{{ form.password(id="password") }}
+                    </div>
+                    <div class="mb-3">
+                        <label class = "register-label" for="password2">Confirm Password:</label>
+                        <br>{{ form.password2(id="password2") }}
+                    </div>
+                    <div class="mb-3">
+                        <input type="submit" class="sub-button" value="Register">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

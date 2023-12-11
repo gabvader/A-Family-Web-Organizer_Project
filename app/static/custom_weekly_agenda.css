@@ -1,0 +1,83 @@
+#weekly-agenda {
+  width: 100%;
+  min-width: 835px;
+  table-layout: fixed;
+  height: 100%;
+  background-color: whitesmoke;
+}
+
+#weekly-agenda .date-column {
+  width: 16%;
+  min-width:min-content;
+  
+}
+
+#weekly-agenda .date-column .td {
+  background-color: #85bcf0;
+}
+
+#weekly-agenda .week-day {
+  font-family: 'Bungee';
+  
+  font-size: 14px;
+  padding: 0px;
+  margin: 2px;
+  font-weight: 200;
+}
+
+#weekly-agenda .month-day {
+  padding: 0px;
+  margin: 2px;
+  font-size: 14px;
+}
+
+#weekly-agenda .user-column {
+  width: 28%;
+}
+
+#weekly-agenda td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  min-width: min-content;
+  width: fit-content;
+  
+  text-align: left;
+  vertical-align: top;
+}
+
+#weekly-agenda th {
+  border-radius: 30px 5px 2px 2px;
+  background-image: linear-gradient(to bottom left, rgb(154, 62, 180) , rgb(181, 115, 199));
+  background-color:rgb(173, 95, 194);
+  border: transparent;
+  font-family: 'Bungee';
+  font-size: large;
+  color:rgb(24, 23, 23);
+  font-weight: 200;
+  padding: 8px;
+  padding-left: 20px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.event-name {
+  display: block;
+  font-weight: bold;
+}
+
+.event-time {
+  display: block;
+  font-size: smaller;
+}
+
+#weekly-agenda td .event-block {
+  display: inline-block	;
+  max-width: 100%;
+  padding: 2px 4px;
+  margin: 2px;
+  background-color:#3c93ab;
+  color: whitesmoke;
+  border: 1px solid #026f93;
+  border-radius: 4px;
+  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.4);
+}

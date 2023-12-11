@@ -1,0 +1,116 @@
+/* Adjust the calendar container size */
+.fc {
+    
+    margin-block-start: 2rem;
+    margin-block-end: 1rem;
+    padding: 0rem;
+    position:center;
+    box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    border-radius: 5px;
+    border: 0px solid #b58fe7;
+    width: 100%;
+    height: 65%;
+  
+  }
+  
+  .fc .fc-daygrid-day-number {
+    color:rgb(33, 37, 41);
+    text-decoration: none;
+  }
+
+  .fc-col-header-cell-cushion {
+    color:rgb(33, 37, 41);
+    text-decoration: none;
+  }
+
+  .fc .fc-view-harness-active>.fc-view {
+    background-color: whitesmoke;
+  }
+
+  
+  /* Style the calendar header */
+  
+  
+  /* Style the calendar title */
+  .fc-toolbar .fc-center h2 {
+    font-size: 1.5rem;
+    font-family: 'Bungee', sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    margin-bottom: 0rem;
+  }
+
+  .fc .fc-toolbar.fc-header-toolbar {
+    padding-left: 1rem;
+    font-family: 'Bungee', sans-serif;
+    color:rgba(0, 0, 0);
+  }
+  
+  /* Style the buttons */
+  .fc-toolbar .fc-button {
+
+    border-color: #6600ff;
+    color: #f7f6f9;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .fc-today-button {
+    font-family: 'Bungee', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 100;
+  }
+  
+  /* Style the buttons on hover */
+  .fc-toolbar .fc-button:hover {
+    background-color: #0056b3;
+    border-color: #fbfbfb;
+    color: #fff;
+  }
+  
+  /* Style the buttons when active */
+  
+  
+  .fc-toolbar .fc-button.fc-state-active {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: #fff;
+  }
+
+  .fc.toolbar.fc.state-hover{
+    box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.4);
+  }
+  
+  /* TO DO Style the calendar days header */ 
+  .fc-header-toolbar {
+    background-color: #e9ecef;
+    font-family: 'Bungee', sans-serif;
+    font-size: 12px;
+    color: rgb(33, 37, 41);
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 200;
+    border-color: #dee2e6;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  #fc-dom-1 {
+    color:rgb(33, 37, 41);
+  }
+  
+
+  /* TO DO Style the calendar day numbers */
+  .fc .fc-daygrid-day-top {   
+    align-items: center;    
+  }
+  
+
+  .fc-day-top .fc-fri .fc-today{
+    background-color: #ffc107;
+    opacity: 0.5;
+  }
+
+  

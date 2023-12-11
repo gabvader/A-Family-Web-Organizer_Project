@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block head %} 
+{% endblock %}
+
+{% block violet_content %}    
+    
+        <div class="vertical-container">
+            <div class="d-grid gap-2 d-md-block" id="welcome-grid">
+                <h2 class="welcome">Welcome, {{ user.alias if user.alias else user.username }}!</h2>
+                <a class="btn btn-primary btn-light btn-sm" data-toggle="tooltip" href="{{ url_for('manage_user_data') }}"><i class='fas fa-user-cog'></i></a>
+                <a class="btn btn-light btn-sm" href="{{ url_for('logout') }}"><i class='fas fa-door-open'></i></a>
+            </div>
+        
+            <div id="calendar"></div>
+
+            <div class="container" id="daily-events"></div>
+
+            <!-- Add your events for the selected day-->
+            <button class="btn btn-primary" id="createEventBtn" href="{{ url_for('create_event') }}">New Event</button>
+        </div>
+    
+
+    <!-- Event Details Modal -->
+    <div id="eventDetailsModal" class="modal">
+        <div class="modal-content" id='yo'>
+            <span class="close">&times;</span>
+            <div id='grid-modal'>
+                <h2 id="modalEventTitle" class="title"></h2>
+
+                <div id="titleContainer" class="title-and-buttons"></div>
+            </div>
+            <div class='container' id='modal-info'>
+                <p id="modalEventDescription">Event Description</p>
+                <p id="modalCreator">Event Creator</p>
+                <p id="modalEventParticipants">Event Participants</p>
+                <p id="modalStartDate">Start Date</p>
+                <p id="modalEndDate">End Date</p>
+
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        // Add the event listener for the 'create new event' button.     
+        document.getElementById("createEventBtn").addEventListener("click", function(event) {
+            event.preventDefault();
+            // Format the currentDate to a string in the format 'YYYY-MM-DD'
+            let formattedDate = currentDate.toISOString().slice(0, 10);
+            window.location.href = "{{ url_for('create_event') }}?selected_date=" + formattedDate;
+            
+        });
+    </script>
+
+    
+{% endblock %}
+
+{% block white_content %}
+
+        <div class="title-container">
+            <h1 class="web-title"> {{ family.name }} Family</h1>
+        </div>
+
+        <div class="table-responsive" id="weekly-agenda-container">
+            <table class="table table-bordered" id="weekly-agenda">
+                
+            </table>
+        </div>
+
+
+{% endblock %}
+
+
+
+            
+
+
+
+
+    

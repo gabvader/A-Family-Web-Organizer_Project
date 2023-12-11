@@ -1,0 +1,218 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#content {
+  display: flex;
+  
+  height: 100%;
+}
+
+
+#violet-container {
+  background-image: linear-gradient(to bottom right, rgb(124, 8, 157) , rgb(173, 95, 194));
+  background-color: rgb(124, 8, 157);
+  display:flex;
+  width: 33.33%;
+  min-height: 100%;
+  float: left;
+  padding: 2rem;
+}
+
+#white-container {
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.991) , rgb(193, 208, 229));
+    background-color: white;
+    width: 66.67%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    padding: 2rem;
+}
+
+.event-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  align-items: center;
+}
+
+
+.event-grid-container:hover {
+  color:#ebebeb;
+}
+
+#grid-modal {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5px;
+  align-items: left;
+}
+
+@media (max-width: 768px) {
+  .event-grid-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .event-grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.web-title{
+  font-family: 'Bungee';
+  font-style: oblique;
+  font-weight: 600;
+  font-size:4.25vw;
+  background-color: #b58fe7;
+  text-align: center;
+  box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 25px;
+}
+.title-container {
+  padding-bottom: 3rem;
+  border-radius: 25px;
+}
+.welcome {
+  font-family: 'Bungee', sans-serif;
+  text-align: left;
+  padding-left: 0rem;
+  color: whitesmoke;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+#titleContainer .delete-event-btn {
+  /* Add your custom styles for the delete button here */
+  background-color:#b58fe7;
+  color: #ffffff;
+  border: none;
+  margin: 0.5rem;
+  font-weight: bold;
+  
+  transition: background-color 0.3s;
+}
+
+.event-title {
+  color: #1a1a1a;
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.participants {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  font-family: 'Roboto', sans-serif;
+}
+  
+#titleContainer .delete-event-btn:hover {
+  /* Add your custom styles for the delete button on hover here */
+  background-color: #cc0000;
+}
+  
+#titleContainer .edit-event-btn {
+  /* Add your custom styles for the edit button here */
+  background-color: #b58fe7;
+  color: #ffffff;
+  border: none;
+  margin: 0.5rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+  
+#titleContainer .edit-event-btn:hover {
+  /* Add your custom styles for the edit button on hover here */
+  background-color: #006600;
+}
+
+#createEventBtn {
+  display:inline;
+  background-color: #e9ecef;
+  color: #181818;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+#createEventBtn:hover {
+  border: 0.5px solid #006acd;
+  background-color: #006acd;
+  color: #ebebeb;
+  box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+#daily-events {
+  max-height: 200px;
+  background-color: #e9ecef;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.4);
+  border: 1px solid #b58fe7;
+  padding: 5px; /* Optional: Add some padding to avoid the scroll bar overlapping the content */
+}
+
+
+.event-container{
+  padding: 5px;
+  padding-bottom: 0px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.event-container.birthday{
+  background-color: #e79bc0;
+}
+
+.event-container.vacation{
+  background-color: #e7de9b;
+}
+
+.event-container.medical{
+  background-color: #9be79f;
+}
+
+.event-container.work{
+  background-color: #9bb9e7;
+}
+
+.event-container:hover {
+  background-color: #109296;
+}
+
+.event-container:hover .event-title {
+   color: #ebebeb;
+}
+
+#welcome-grid {
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+  
+
+

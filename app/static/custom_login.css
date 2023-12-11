@@ -1,0 +1,112 @@
+html, body {
+    height: 100vh;
+    width: 100vw;
+    
+    margin: 0;
+    padding: 0;
+  }
+
+
+.violet-container-whole {
+    height: 100%;
+    width: 100%;
+    min-height:fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.991) , rgb(193, 208, 229));
+  }
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: linear-gradient(to bottom right, rgb(137, 51, 156) , rgb(228, 119, 245));
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border: solid 10px;
+    border-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px 0 rgba(0, 0, 0, 0.4);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: whitesmoke;
+    font-family: 'Bungee';
+    
+}
+
+.main {
+    font-weight: 600;
+    font-size: 50px;
+    margin-bottom: 0.5rem;
+}
+
+.second {
+    font-weight: 10;
+    font-size: 25px;
+
+}
+
+.white-container {
+    background-color: rgb(118, 183, 193);
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 50px;
+    width: 400px;
+}
+.login {
+    text-align: center;
+}
+.form-label {
+    font-family: 'Bungee';
+    color: #000000;
+    text-align: center;
+    font-weight: 80;
+}
+
+.register {
+    text-align: center;
+}
+
+#family-cont > p {
+    font-family: 'Bungee';
+    color: #000000;
+    text-align: center;
+    font-weight: 80;
+    margin: 0px;
+}
+
+#family-cont {
+    border-radius: 10px;
+    border: solid #9d5df2;
+    padding-bottom: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.register-label {
+    font-family: 'Bungee';
+    color: #000000;
+    text-align: center;
+    font-weight: 80;
+}
+
+.sub-button {
+    font-family: 'Bungee';
+    color: #000000;
+    text-align: center;
+    font-weight: 80;
+}
+
+.sub-button:hover {
+    color: #e8e5e5;
+    background-color: darkmagenta;
+}
