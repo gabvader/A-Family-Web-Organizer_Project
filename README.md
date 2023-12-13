@@ -106,6 +106,8 @@ The app database has different classes of models and tables. For creating one to
 - class EventType: a given event type can have many different events associated. 
 - table `event_participants` for a many to many relationship between users and events.
 
+video eliminado
+
 
 
 
